@@ -41,13 +41,16 @@ $colors = $color->findAll();
                     <td>Votes</td>
                 </tr>
             </thead>
+
             <tbody>
 
                 <?php foreach ($colors as $color): ?>
-                <tr data-color-id="<?php echo $color['id'] ?>">
-                    <td><a class="color-name" href="#"><?php echo $color['name'] ?></td>
-                    <td class="votes"></td>
-                </tr>
+                    <tr data-color-id="<?php echo $color['id'] ?>">
+                        <td>
+                            <a class="color-name" href="#"><?php echo $color['name'] ?></a>
+                        </td>
+                        <td class="votes"></td>
+                    </tr>
                 <?php endforeach; ?>
 
                 <tr class="active">
@@ -97,7 +100,6 @@ $(document).ready(function() {
         $('#total').parents('tr').addClass('info');
 
         return false;
-
     });
 });
 </script>
